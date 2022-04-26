@@ -1,4 +1,5 @@
 from http.client import responses
+from math import prod
 from typing import Dict, List
 
 from sqlalchemy.util.langhelpers import NoneType
@@ -62,8 +63,12 @@ async def order(pesanan : schemas.PesananCreate,db: Session = Depends(get_db)):
     if not (pesanan.volume_produk > 0):
         raise HTTPException(status_code=403, detail="No volume input given")
 
-    if (crud.get_product(db,pesanan.id_produk).volume <= 0):
+    product = crud.get_product(db,pesanan.id_produk)
+
+    if (product.volume <= 0):
         raise HTTPException(status_code=404, detail = "There's no product left in this machine, please pick another one or cancel your order")
+    elif(pesanan.volume_produk > product.volume):
+        raise HTTPException(status_code=404, detail = "Not enough remaining volume")
     db_order = crud.create_order(db,pesanan)
 
     # db_product = crud.update_item_volume(db, pesanan.id_produk,(-pesanan.volume_produk)
