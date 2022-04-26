@@ -9,10 +9,13 @@ from sqlalchemy.orm import sessionmaker
 # DATABASE_PASSWORD = "pandu"
 # DATABASE_URI = "128.199.151.55"
 # DATABASE_NAME = "refiller"
-DATABASE_URI = 'postgresql://postgres:pandu@localhost/refiller'
+#DATABASE_URI = 'postgresql://postgres:pandu@localhost/refiller'
+import os
+
+DATABASE_URL = os.environ.get('DATABASE_URL')
 
 engine = create_engine(
-    DATABASE_URI
+    DATABASE_URL
 )
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
