@@ -2,7 +2,7 @@ from sqlalchemy import Boolean, Column, ForeignKey, BigInteger, String, Date, Te
 from sqlalchemy.sql.expression import null
 from sqlalchemy.sql.sqltypes import Enum
 from sqlalchemy.ext.declarative import declarative_base
-from database import Base
+from refiller.database import Base
 from sqlalchemy.orm import relationship
 
 
