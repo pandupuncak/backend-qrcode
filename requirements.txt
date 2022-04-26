@@ -1,0 +1,26 @@
+alembic==1.7.7
+anyio==3.5.0
+asgiref==3.5.0
+click==8.1.2
+colorama==0.4.4
+fastapi==0.75.2
+greenlet==1.1.2
+gunicorn==20.1.0
+h11==0.13.0
+idna==3.3
+Mako==1.2.0
+MarkupSafe==2.1.1
+# Editable install with no version control (myproject==1.0)
+-e d:\projects\misc\reksti\backend
+numpy==1.22.3
+opencv-python==4.5.5.64
+Pillow==9.1.0
+psycopg2==2.9.3
+pydantic==1.9.0
+python-dotenv==0.20.0
+qrcode==7.3.1
+sniffio==1.2.0
+SQLAlchemy==1.4.35
+starlette==0.17.1
+typing_extensions==4.2.0
+uvicorn==0.17.6

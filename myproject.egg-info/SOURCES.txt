@@ -1,0 +1,11 @@
+setup.py
+fastapi/__init__.py
+fastapi/crud.py
+fastapi/database.py
+fastapi/main.py
+fastapi/models.py
+fastapi/schemas.py
+myproject.egg-info/PKG-INFO
+myproject.egg-info/SOURCES.txt
+myproject.egg-info/dependency_links.txt
+myproject.egg-info/top_level.txt
