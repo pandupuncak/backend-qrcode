@@ -4,8 +4,8 @@ from fastapi import Depends, FastAPI, HTTPException, status
 from sqlalchemy.sql.expression import delete
 from fastapi.responses import FileResponse
 
-from refiller import database, generator
-from refiller import models, schemas
+import database, generator
+import models, schemas
 from datetime import datetime, timedelta
 from typing import Optional
 
